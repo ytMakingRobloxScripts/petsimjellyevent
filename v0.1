@@ -13,7 +13,9 @@ local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 local humanoid = character:WaitForChild("Humanoid")
 
 -- Save original position
-local originalPosition = humanoidRootPart.CFrame
+	if humanoidRootPart and humanoidRootPart.Parent then
+		originalPosition = humanoidRootPart.CFrame
+	end
 
 -- Main container for GUI
 local playerGui = player:WaitForChild("PlayerGui")
